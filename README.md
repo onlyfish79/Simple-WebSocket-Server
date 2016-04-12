@@ -22,7 +22,7 @@ See ws_examples.cpp or wss_examples.cpp for example usage.
 
 ### Dependencies
 
-* Boost C++ libraries 
+* Boost C++ libraries(使用1.55.0) 
 * OpenSSL libraries
 
 ### Compile
@@ -50,3 +50,10 @@ Then:
 ```
 ./wss_examples
 ```
+
+注意：
+1. 使用的是boost1.55.0，自己编译的库文件
+为了便于移植，不用在编译和安装boost，使用静态链接boost需要的库文件，
+在原来功能的基础上进行了修改，主要修改了CMakeLists.txt，修改boost库的链接，主要该工程只能在>=gcc4.8(c++11)的版本上使用
+
+2. ./ws_examples, 如果出现what():bind:Address already in use，表示端口号被占用，程序中使用的端口号是8080，可以改成30000
