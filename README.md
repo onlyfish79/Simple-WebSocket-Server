@@ -58,4 +58,7 @@ Then:
 在原来功能的基础上进行了修改，主要修改了CMakeLists.txt，修改boost库的链接，主要该工程只能在>=gcc4.8(c++11)的版本上使用
 
 2. ./ws_examples, 如果出现what():bind:Address already in use，表示端口号被占用，程序中使用的端口号是8080，可以改成30000
+
+3. 如果在裸机上编译该程序程序（ubuntu14.04），需要安装cmake和ssl，如下：
+sudo apt-get install cmake libssl-dev
 ```
